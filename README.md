@@ -1,9 +1,9 @@
 # Binance Budapest Bot
 This bot connects to Binance and buys or sells taking into account the Budapest strategy, which consists of buying if the current price is in the green quadrant and selling if it is in the red quadrant.
 The flag is formed taking into account the high and low prices of the last 30 days.  
-- **RED ZONE**: Buy BTC. The current price is between the minimum (in the last 30 days) and 33% more expensive than the minimum. :red_circle:
+- **RED ZONE**: Sell BTC. The current price is between the maximum (in the last 30 days) and 33% cheaper than the maximum. :red_circle:
 - **WHITE ZONE**: No buy no sell :white_circle:
-- **GREEN MOON**: Sell BTC. The current price is between the maximum (in the last 30 days) and 33% cheaper than the maximum. :green_circle:
+- **GREEN ZONE**: Buy BTC. The current price is between the minimum (in the last 30 days) and 33% more expensive than the minimum. :green_circle:
 
 ![Moon trading](https://github.com/amuracciole/budapest_bot_binance/blob/main/picture.png)
 
