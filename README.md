@@ -1,27 +1,29 @@
-# Binance Moon Bot
-This is a bot programed in Python and the idea is to optimize SELL and BUY orders taking into account the moon state:
-- **FULL MOON**: Buy BTC :full_moon:
-- **NEW MOON**: Sell BTC :new_moon:
+# Binance Budapest Bot
+This bot connects to Binance and buys or sells taking into account the Budapest strategy, which consists of buying if the current price is in the green quadrant and selling if it is in the red quadrant.
+The flag is formed taking into account the high and low prices of the last 30 days.  
+- **RED ZONE**: Buy BTC. The current price is between the minimum (in the last 30 days) and 33% more expensive than the minimum. :red_circle:
+- **WHITE ZONE**: No buy no sell :white_circle:
+- **GREEN MOON**: Sell BTC. The current price is between the maximum (in the last 30 days) and 33% cheaper than the maximum. :green_circle:
 
-![Moon trading](https://github.com/amuracciole/moon_bot_binance/blob/main/picture.png)
+![Moon trading](https://github.com/amuracciole/budapest_bot_binance/blob/main/picture.png)
 
 :warning: **ALERT!: This is an academic task and NOT AN INVEST ADVISE** :warning:
 
 ## Keys :key:
 Plese add you own keys and paths in [config.py](https://github.com/amuracciole/moon_bot_binance/blob/main/config.py) file
 - API_KEY & API_SECRET -> Obtained in Binance web
-- EMAIL_FROM -> Mail that sends the notifications
-- EMAIL_TO -> Mail where notifications are received
-- EMAIL_PASS -> This is not your email account password, is a "key" obtained in your email settings to allow you send messages from external API
-- HISTORIC_PATH & LOGS_PATH -> Complete path that you save those files
-- BUY_PATH & SELL_PATH -> Complete path that you save those files. These files are use to calculare earns
-- TELEGRAM_TOKEN & TELEGRAM_CHAT_ID: These are Telegram information. To get the token, you must create a Telegram Bot. I recommend BotFather
+- Full directory where the text files that store global variables will be located. There are 8 text files in total, 4 are for the production environment and the other 4 are for backtesting.
 
-## Email :email:
-Allows you to send an email with a notification once bot make an operation. This is a second way to save a history
+By default the variables should be initialized:
+- "coins" -> Amount of BTC to start with.
+- "money" -> Amount of stable coin BUSD to start with
+- "next order" -> Variable defining the amount of BUSD to be used to buy BTC next time
+- "ready to sell" -> Variable indicating whether it is possible to sell
 
-## Telegram :iphone:
-Allows you to send a Telegram message with a notification once bot make an operation. This is a third way to save a history
+As an example we start with 0, 1000, 10, 0 respectively.
+
+## Backtesting :triangular_flag_on_post:
+The [budapest_strategy_backtest.py](https://github.com/amuracciole/budapest_bot_binance/blob/main/budapest_strategy_backtest.py) file is used to backtest the script and see its profitability. By default it does backtesting from the daily candles of the last 365 days.
 
 ## Crontab :stopwatch:
 You MUST include the following line in you crontab file to run the script every day at 4:00 AM (You can schedule as you wish)

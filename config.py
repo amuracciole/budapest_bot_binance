@@ -1,13 +1,11 @@
-#!/usr/bin/env python3
-
 API_KEY = 'aaa'
 API_SECRET = 'bbb'
-EMAIL_FROM = 'ccc@mail.com'
-EMAIL_TO = 'ddd@mail.com'
-EMAIL_PASS = 'eee'
-HISTORIC_PATH = 'fff'
-LOGS_PATH = 'ggg'
-BUY_PATH = 'hhh'
-SELL_PATH = 'iii'
-TELEGRAM_TOKEN = 'jjj'
-TELEGRAM_CHAT_ID = 'kkk'
+NEXT_ORDER_PATH = '/PATH/next_order.txt'
+MONEY_PATH = '/PATH/money.txt'
+READY_TO_SELL_PATH = '/PATH/ready_to_sell.txt'
+COINS_PATH = '/PATH/coins.txt'
+
+NEXT_ORDER_PATH_BACKTEST = '/PATH/next_order_backtest.txt'
+MONEY_PATH_BACKTEST = '/PATH/money_backtest.txt'
+READY_TO_SELL_PATH_BACKTEST = 'ready_to_sell_backtest.txt'
+COINS_PATH_BACKTEST = 'coins_backtest.txt'
