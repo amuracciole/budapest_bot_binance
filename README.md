@@ -10,7 +10,7 @@ The flag is formed taking into account the high and low prices of the last 30 da
 :warning: **ALERT!: This is an academic task and NOT AN INVEST ADVISE** :warning:
 
 ## Keys :key:
-Plese add you own keys and paths in [config.py](https://github.com/amuracciole/moon_bot_binance/blob/main/config.py) file
+Plese add you own keys and paths in [config.py](https://github.com/amuracciole/budapest_bot_binance/blob/main/config.py) file
 - API_KEY & API_SECRET -> Obtained in Binance web
 - Full directory where the text files that store global variables will be located. There are 8 text files in total, 4 are for the production environment and the other 4 are for backtesting.
 
